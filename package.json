@@ -1,0 +1,35 @@
+{
+  "name": "HTMLTemplateElement-polyfill",
+  "version": "1.0.0",
+  "description": "Minimal polyfill for HTMLTemplateElement",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "browserify ./test/test.js -t 6to5ify -o ./test/test-bundle.js",
+    "js": "6to5 ./src/index.js -o ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kristoferjoseph/HTMLTemplateElement"
+  },
+  "keywords": [
+    "HTMLTemplateElement",
+    "polyfill",
+    "template",
+    "webcomponents"
+  ],
+  "author": "@dam",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/kristoferjoseph/HTMLTemplateElement/issues"
+  },
+  "homepage": "https://github.com/kristoferjoseph/HTMLTemplateElement",
+  "devDependencies": {
+    "6to5ify": "^3.1.2",
+    "browserify": "^8.1.1",
+    "chai": "^1.10.0",
+    "mocha": "^2.1.0"
+  }
+}
