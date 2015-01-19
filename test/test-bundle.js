@@ -6170,8 +6170,8 @@ var expect = require("chai").expect;
 describe("HTMLTemplateElement", function () {
   var body = document.body, frame, doc, template;
   beforeEach(function (done) {
-    body.insertAdjacentHTML("afterBegin", "<iframe style=\"border:none;\" src=\"./fixtures/HTMLTemplateElement.html\"></iframe>");
-    frame = body.children[0];
+    body.insertAdjacentHTML("beforeEnd", "<iframe style=\"border:none;\" src=\"./fixtures/HTMLTemplateElement.html\"></iframe>");
+    frame = body.children[body.children.length - 1];
     frame.addEventListener("load", function () {
       doc = frame.contentDocument;
       template = doc.querySelector("template");
