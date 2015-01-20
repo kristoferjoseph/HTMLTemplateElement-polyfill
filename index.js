@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = function () {
+module.exports = (function () {
   if (typeof HTMLTemplateElement !== "undefined") {
     return;
   }
@@ -30,4 +30,4 @@ module.exports = function () {
       HTMLTemplateElement.initialize(document);
     });
   })();
-};
+})();
